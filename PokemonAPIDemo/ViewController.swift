@@ -3,7 +3,7 @@
 //  PokemonAPIDemo
 //
 //  Created by 後藤孝輔 on 2021/09/15.
-//
+///
 
 import UIKit
 
