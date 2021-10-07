@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PokeManagerDelegate {
-    func didFeatchPoke(_ pokeManager: PokeManager, name: String)
+    func didFeatchPoke(_ pokeManager: PokeManager, name: String, number: Int)
 }
 
 struct PokeManager {
@@ -16,8 +16,9 @@ struct PokeManager {
     var delegate: PokeManagerDelegate?
     
     // pokeAPIからデータを取得
-    func featchPokeData(number: String) {
-        let urlString = "https://pokeapi.co/api/v2/pokemon-species/" + number + "/"
+    func featchPokeData() {
+        let randomNumber = Int.random(in: 1...898)
+        let urlString = "https://pokeapi.co/api/v2/pokemon-species/\(randomNumber)/"
         guard let url = URL(string: urlString) else { fatalError() }
         
         let session = URLSession(configuration: .default)
@@ -25,7 +26,7 @@ struct PokeManager {
         let task = session.dataTask(with: url) { (data, response, error) in
             guard let safeData = data else { fatalError() }
             guard let pokeModel = self.parseJSON(safeData) else { fatalError() }
-            self.delegate?.didFeatchPoke(self, name: pokeModel.name)
+            self.delegate?.didFeatchPoke(self, name: pokeModel.name, number: randomNumber)
         }
         
         task.resume()

@@ -9,9 +9,17 @@ import UIKit
 
 class FirstView: UIView {
     // MARK: - Properties
-    let nameLabel: UILabel = {
+    let questionLabel: UILabel = {
         let label = UILabel()
-        label.text = "ポケモン名"
+        label.text = "問題"
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let answerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "結果"
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -19,7 +27,7 @@ class FirstView: UIView {
     
     let inputTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "図鑑番号を入力"
+        textField.placeholder = "答えを入力"
         textField.layer.cornerRadius = 5.0
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.gray.cgColor
@@ -27,10 +35,18 @@ class FirstView: UIView {
         return textField
     }()
     
+    let answerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("回答", for: .normal)
+        button.backgroundColor = .red
+        button.setTitleColor(UIColor.white, for: .normal)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let stack = UIStackView(arrangedSubviews: [nameLabel, inputTextField])
+        let stack = UIStackView(arrangedSubviews: [questionLabel, answerLabel, inputTextField, answerButton])
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fillEqually
