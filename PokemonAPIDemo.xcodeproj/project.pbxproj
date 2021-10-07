@@ -20,6 +20,8 @@
 		02D34568270EC0BC00B3127D /* PokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D34567270EC0BC00B3127D /* PokeManager.swift */; };
 		02D3456E270EC44900B3127D /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3456D270EC44900B3127D /* FirstView.swift */; };
 		02D34570270EC9AD00B3127D /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3456F270EC9AD00B3127D /* Benchmark.swift */; };
+		02D34572270EE4F700B3127D /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D34571270EE4F700B3127D /* QuizManager.swift */; };
+		02D34574270EE55000B3127D /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D34573270EE55000B3127D /* QuizModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		02D34567270EC0BC00B3127D /* PokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeManager.swift; sourceTree = "<group>"; };
 		02D3456D270EC44900B3127D /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		02D3456F270EC9AD00B3127D /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
+		02D34571270EE4F700B3127D /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
+		02D34573270EE55000B3127D /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				02D34567270EC0BC00B3127D /* PokeManager.swift */,
 				02867A9726F22F230065BDBF /* PokeModel.swift */,
 				02D3456F270EC9AD00B3127D /* Benchmark.swift */,
+				02D34571270EE4F700B3127D /* QuizManager.swift */,
+				02D34573270EE55000B3127D /* QuizModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 				02D34568270EC0BC00B3127D /* PokeManager.swift in Sources */,
 				02867A6A26F21F740065BDBF /* ViewController.swift in Sources */,
 				02867A9626F224250065BDBF /* PokeData.swift in Sources */,
+				02D34574270EE55000B3127D /* QuizModel.swift in Sources */,
+				02D34572270EE4F700B3127D /* QuizManager.swift in Sources */,
 				02867A6626F21F740065BDBF /* AppDelegate.swift in Sources */,
 				02D34570270EC9AD00B3127D /* Benchmark.swift in Sources */,
 				02867A9826F22F230065BDBF /* PokeModel.swift in Sources */,
