@@ -22,6 +22,8 @@
 		02D34570270EC9AD00B3127D /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3456F270EC9AD00B3127D /* Benchmark.swift */; };
 		02D34572270EE4F700B3127D /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D34571270EE4F700B3127D /* QuizManager.swift */; };
 		02D34574270EE55000B3127D /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D34573270EE55000B3127D /* QuizModel.swift */; };
+		02EF8CDB270FEA0900C52EB4 /* PokeVattleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EF8CDA270FEA0900C52EB4 /* PokeVattleData.swift */; };
+		02EF8CDD270FEF0E00C52EB4 /* PokeVattleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EF8CDC270FEF0E00C52EB4 /* PokeVattleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		02D3456F270EC9AD00B3127D /* Benchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		02D34571270EE4F700B3127D /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		02D34573270EE55000B3127D /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		02EF8CDA270FEA0900C52EB4 /* PokeVattleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeVattleData.swift; sourceTree = "<group>"; };
+		02EF8CDC270FEF0E00C52EB4 /* PokeVattleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeVattleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				02D3456F270EC9AD00B3127D /* Benchmark.swift */,
 				02D34571270EE4F700B3127D /* QuizManager.swift */,
 				02D34573270EE55000B3127D /* QuizModel.swift */,
+				02EF8CDA270FEA0900C52EB4 /* PokeVattleData.swift */,
+				02EF8CDC270FEF0E00C52EB4 /* PokeVattleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +324,8 @@
 				02D34574270EE55000B3127D /* QuizModel.swift in Sources */,
 				02D34572270EE4F700B3127D /* QuizManager.swift in Sources */,
 				02867A6626F21F740065BDBF /* AppDelegate.swift in Sources */,
+				02EF8CDB270FEA0900C52EB4 /* PokeVattleData.swift in Sources */,
+				02EF8CDD270FEF0E00C52EB4 /* PokeVattleModel.swift in Sources */,
 				02D34570270EC9AD00B3127D /* Benchmark.swift in Sources */,
 				02867A9826F22F230065BDBF /* PokeModel.swift in Sources */,
 				02867A6826F21F740065BDBF /* SceneDelegate.swift in Sources */,
