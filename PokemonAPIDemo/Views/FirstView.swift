@@ -40,25 +40,31 @@ class FirstView: UIView {
         button.setTitle("回答", for: .normal)
         button.backgroundColor = .red
         button.setTitleColor(UIColor.white, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let stack = UIStackView(arrangedSubviews: [questionLabel, answerLabel, inputTextField, answerButton])
+        let stack = UIStackView(arrangedSubviews: [questionLabel, answerLabel, inputTextField])
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(stack)
+        addSubview(answerButton)
         
         [
             stack.topAnchor.constraint(equalTo: topAnchor, constant: 150),
             stack.leftAnchor.constraint(equalTo: leftAnchor, constant: 50),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -150),
-            stack.rightAnchor.constraint(equalTo: rightAnchor, constant: -50)
+            stack.rightAnchor.constraint(equalTo: rightAnchor, constant: -50),
+            answerButton.topAnchor.constraint(equalTo: stack.bottomAnchor, constant: 30),
+            answerButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            answerButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 150),
+            answerButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -150)
         ].forEach { $0.isActive = true }
     }
     
