@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var questionLabel: UILabel!
+    var imageView: UIImageView!
     var answerLabel: UILabel!
     var textField: UITextField!
     var answerButton: UIButton!
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         let firstView = FirstView()
         firstView.translatesAutoresizingMaskIntoConstraints = false
         questionLabel = firstView.questionLabel
+        imageView = firstView.imageView
         answerLabel = firstView.answerLabel
         textField = firstView.inputTextField
         answerButton = firstView.answerButton
@@ -60,6 +62,17 @@ class ViewController: UIViewController {
         guard let text = textField.text else { return }
         quizManager.judge(answer: quiz.answer, input: text)
     }
+    
+    func getImageByUrl(url: String) -> UIImage{
+        let url = URL(string: url)
+        do {
+            let data = try Data(contentsOf: url!)
+            return UIImage(data: data)!
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        return UIImage()
+    }
 
 }
 // MARK: - UITextFieldDelegate Methods
@@ -79,12 +92,20 @@ extension ViewController: UITextFieldDelegate {
 
 // MARK: - PokeManagerDelegate Methods
 extension ViewController: PokeManagerDelegate {
+    func didFeatchPokeVattle(_ pokeManager: PokeManager, image: String) {
+        DispatchQueue.main.async {
+            self.imageView.image = self.getImageByUrl(url: image)
+        }
+    }
+    
     func didFeatchPoke(_ pokeManager: PokeManager, name: String, number: Int) {
         quiz.question = "図鑑No.\(number)のポケモンは？"
         quiz.answer = name
+        print(name)
         
         DispatchQueue.main.async {
             self.questionLabel.text = self.quiz.question
+            self.pokeManager.featchPokeVattleData(name: self.quiz.answer)
         }
     }
 }
@@ -96,6 +117,7 @@ extension ViewController: QuizManagerDelegate {
             self.answerLabel.text = "正解！"
         }
         pokeManager.featchPokeData()
+        pokeManager.featchPokeVattleData(name: quiz.answer)
     }
     
     func didJudgeIncorrect(_ quizManager: QuizManager) {

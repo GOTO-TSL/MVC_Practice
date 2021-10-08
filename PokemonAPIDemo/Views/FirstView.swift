@@ -17,6 +17,12 @@ class FirstView: UIView {
         return label
     }()
     
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     let answerLabel: UILabel = {
         let label = UILabel()
         label.text = "結果"
@@ -47,7 +53,7 @@ class FirstView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let stack = UIStackView(arrangedSubviews: [questionLabel, answerLabel, inputTextField])
+        let stack = UIStackView(arrangedSubviews: [questionLabel, imageView, answerLabel, inputTextField])
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fillEqually
